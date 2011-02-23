@@ -41,6 +41,8 @@ or for legacy Rails (1.2.x thru 2.2.x) apps
 
 == VARIABLES:
 
+unicorn_env::           Sets the application environment used by unicorn.
+                        Defaults to 'development'
 unicorn_command::       Defaults to 'unicorn' when using
                         <tt>:app => :unicorn</tt>, and 'unicorn_rails' with
                         <tt>:app => :unicorn_rails.</tt>
