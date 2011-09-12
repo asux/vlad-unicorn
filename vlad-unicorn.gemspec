@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.extra_rdoc_files = ["README.rdoc", "History.rdoc", "Manifest.txt", "docs/rails-configuration.rdoc"]
 
-  s.add_runtime_dependency "vlad", "~> 2.0.0"
+  s.add_runtime_dependency "vlad", "~> 2.0"
 end
