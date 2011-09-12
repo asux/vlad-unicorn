@@ -45,7 +45,7 @@ rails-configuration.txt[link:docs/rails-configuration_txt.html].
 == VARIABLES:
 
 unicorn_env::           Sets the application environment used by unicorn.
-                        Defaults to 'development'
+                        Defaults to +rails_env+ || "development"
 unicorn_command::       Defaults to 'unicorn' when using
                         <tt>:app => :unicorn</tt>, and 'unicorn_rails' with
                         <tt>:app => :unicorn_rails.</tt>
