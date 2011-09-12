@@ -1,8 +1,12 @@
 === 2.0.1 / TBA
 
-  * This fork of https://github.com/dapi/vlad-unicorn
-  * +unicorn_env+ variable set to +rails_env+ variable by default
+  * This fork https://github.com/dapi/vlad-unicorn -> https://github.com/asux/vlad-unicorn
+
+  * +unicorn_env+ variable set to +rails_env+ || "development" by default
+
   * Added gemspec for convinient using with Gemfile
+
+  * Change directory to +current_path+ before run unicorn command
 
 === 2.0.0 / 2010-09-18
 
