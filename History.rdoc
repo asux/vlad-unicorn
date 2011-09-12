@@ -1,0 +1,12 @@
+=== 2.0.1 / TBA
+
+  * This fork of https://github.com/dapi/vlad-unicorn
+  * +unicorn_env+ variable set to +rails_env+ variable by default
+  * Added gemspec for convinient using with Gemfile
+
+=== 2.0.0 / 2010-09-18
+
+* 1 major enhancement
+
+  * Birthday!
+
