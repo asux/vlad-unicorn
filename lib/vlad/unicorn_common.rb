@@ -19,7 +19,7 @@ module Vlad
 
     def self.start(opts = '')
       cmd = signal('HUP')
-      cmd << %( || #{unicorn_command} -D --config-file #{unicorn_config} #{opts})
+      cmd << %( || (#{unicorn_command} -D --config-file #{unicorn_config} #{opts}))
       maybe_sudo %(sh -c '#{cmd}')
     end
 
@@ -40,7 +40,7 @@ namespace :vlad do
 
   def unicorn(opts = '')
     cmd = "cd #{current_path};"
-    cmd << " #{unicorn_command} -D -E #{unicorn_env} -c #{unicorn_config}"
+    cmd << " (#{unicorn_command} -D -E #{unicorn_env} -c #{unicorn_config})"
     cmd << " #{opts}"
     cmd
   end

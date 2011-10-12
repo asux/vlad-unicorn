@@ -4,7 +4,7 @@ namespace :vlad do
   ##
   # Unicorn app server for legacy Rails apps
 
-  set :unicorn_command, "bundle exec unicorn_rails"
+  set :unicorn_command, "cd #{current_path}; bundle exec unicorn_rails"
 
   desc "(Re)Start the app servers"
   remote_task :start_app, :roles => :app do
