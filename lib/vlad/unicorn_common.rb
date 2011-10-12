@@ -39,8 +39,7 @@ namespace :vlad do
   set(:unicorn_env)   { rails_env || "development" }
 
   def unicorn(opts = '')
-    cmd = "cd #{current_path};"
-    cmd << " (#{unicorn_command} -D -E #{unicorn_env} -c #{unicorn_config})"
+    cmd = "(cd #{current_path}; #{unicorn_command} -D -E #{unicorn_env} -c #{unicorn_config})"
     cmd << " #{opts}"
     cmd
   end
