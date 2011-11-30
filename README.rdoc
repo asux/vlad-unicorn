@@ -44,23 +44,26 @@ rails-configuration.txt[link:docs/rails-configuration_txt.html].
 
 == VARIABLES:
 
-unicorn_env::           Sets the application environment used by unicorn.
-                        Defaults to +rails_env+ || "development"
-unicorn_command::       Defaults to 'unicorn' when using
-                        <tt>:app => :unicorn</tt>, and 'unicorn_rails' with
-                        <tt>:app => :unicorn_rails.</tt>
-unicorn_config::        The location of the Unicorn config file. Defaults to
-                        "#{current_path}/config/unicorn.rb".
-unicorn_pid::           The location of the Unicorn pid file. Must be the same
-                        as in unicorn.rb file. Currently needed for the
-                        +stop_app+ task, but hopefully won't be necessary in a
-                        future version.
-unicorn_rackup::        The location of the rackup file unicorn should load.
-                        Defaults to "#{current_path}/config.ru". Not set nor
-                        used for +unicorn_rails+.
-unicorn_use_sudo::      Whether to use sudo to run the 'unicorn' command on
-                        the remote host. Probably necessary if you specify a
-                        user and group in unicorn.rb.
+unicorn_env::              The application environment used by unicorn.
+                           Defaults to <tt>rails_env || "development"</tt>
+unicorn_command::          Defaults to +'unicorn'+ when using
+                           <tt>:app => :unicorn</tt>, and +'unicorn_rails'+ with
+                           <tt>:app => :unicorn_rails.</tt>
+unicorn_config::           The location of the Unicorn config file. Defaults to
+                           +"#{current_path}/config/unicorn.rb"+.
+unicorn_pid::              The location of the Unicorn pid file. Must be the same
+                           as in unicorn.rb file. Currently needed for the
+                           +stop_app+ task, but hopefully won't be necessary in a
+                           future version.
+unicorn_rackup::           The location of the rackup file unicorn should load.
+                           Defaults to +"#{current_path}/config.ru"+. Not set nor
+                           used for +unicorn_rails+.
+unicorn_use_sudo::         Whether to use sudo to run the +'unicorn'+ command on
+                           the remote host. Probably necessary if you specify a
+                           user and group in unicorn.rb.
+unicorn_reload_signals::   If unicorn config have +preload_app = true+,
+                           use +['USR2', 'QUIT']+ signals for reload new code,
+                           otherwise, use defualt +['HUP']+.
 
 For more on specific issues when deploying Rails applications, see
 rails-configuration.txt[link:docs/rails-configuration_txt.html].
